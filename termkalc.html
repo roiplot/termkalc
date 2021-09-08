@@ -1,0 +1,61 @@
+<html>
+
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Termkalc Web</title>
+    <link rel="stylesheet" href="termkalc_appdata/css/bootstrap.min.css">
+    <link rel="stylesheet" href="termkalc_appdata/css/custom-css.css">
+</head>
+
+<body>
+    <br>
+    <div class="container-sm">
+        <header>
+            <h4 class="row col text-center">
+                <label id="site_title"></label>
+            </h4>
+        </header>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <select id="func_selector" class="form-select" onchange="loadProperFields()"></select>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="row" id="input_area"></div>
+        </div>
+        <br>
+        <div>
+            <button type="button" class="btn btn-primary" onclick="submit_request()">Calculate</button>
+        </div>
+        <!-- Cuando se haga click en un boton, mandar ese valor al servidor
+            y que me muestre el valor en el cuadro de -->
+        <br>
+        <div class="row">
+            <div class="row">
+                <label>Operation requested & result:</label>
+            </div>
+            <div class="col-sm-12">
+                <input id="op_req" type="text" class="form-control" placeholder="Operación realizada" readonly>
+            </div>
+            <div class="col-sm-12">
+                <input id="result" type="text" class="form-control" placeholder="Resultado" readonly>
+            </div>
+        </div>
+        <br>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+<script src="termkalc_appdata/js/bootstrap.bundle.min.js"></script>
+<script src="termkalc_appdata/js/math.min.js"></script>
+<script src="termkalc_appdata/js/info_database.js"></script>
+<script src="termkalc_appdata/js/dom_loader.js"></script>
+<script src="termkalc_appdata/js/functions.js"></script>
+<script src="termkalc_appdata/js/site_load.js"></script>
+<script src="termkalc_appdata/js/io_process.js"></script>
+
+</html>
