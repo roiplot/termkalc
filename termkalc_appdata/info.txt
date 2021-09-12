@@ -1,4 +1,0 @@
-Notes:
-
-Hay cosas que hay que cambiar, como por ejemplo usar jquery para hacer las cosas mas faciles.
-
