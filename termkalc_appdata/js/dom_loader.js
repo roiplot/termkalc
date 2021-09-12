@@ -1,5 +1,5 @@
-let func_selector = document.getElementById("func_selector");
-let _area = document.getElementById("input_area");
+var func_selector = $('#func_selector').get(0);
+var _area = $('#input_area').get(0);
 
 
 function clear() {
