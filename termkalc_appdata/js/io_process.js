@@ -1,4 +1,3 @@
-//TODO - ORDENAR ESTOOOOO
 // SACAR LOS COSOS DE INPUTS PARA AFUERA
 
 /* --- Variables ---*/
