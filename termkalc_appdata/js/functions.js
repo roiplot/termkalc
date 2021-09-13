@@ -33,7 +33,7 @@ function raiz_test(a) {
     console.log(res);
 }
 
-function printPrimeFactors(_n) {
+function primeFactors(_n) {
 	_ret = "";
 	while (_n % 2 == 0) 
 	{ 
@@ -72,7 +72,7 @@ function launchFactorial(_nmb) {
 }
 
 function launchPrimeFactors(_nmb) {
-    return printPrimeFactors(_nmb);
+    return primeFactors(_nmb);
 
 }
 
