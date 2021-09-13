@@ -4,16 +4,21 @@
 /* --- Variables ---*/
 
 // DOM
-// let input_field = document.getElementById("input");
-let resultado_field = document.getElementById("result");
-let req_op_field = document.getElementById("op_req");
-let op_selected_field = document.getElementById('func_selector');
+var resultado_field = $('#result').get(0);
+var req_op_field = $('#op_req').get(0);
+var op_selected_field = $('#func_selector').get(0);
+
+// let resultado_field = document.getElementById("result");
+// let req_op_field = document.getElementById("op_req");
+// let op_selected_field = document.getElementById('func_selector');
 
 // LOCAL
-let _res = ""; // final result
-let _op_done = "";
-let _result_temp = "";
-let _res_op_temp = "";
+var _res = ""; // final result
+var _op_done = "";
+var _result_temp = "";
+var _res_op_temp = "";
+
+var _input_1, _input_2, _input_3; 
 
 // RESET
 //input_field.value = "";
@@ -40,15 +45,17 @@ function submit_request() {
 /* --- Templates --- */
 
 function OneInput () {
-	var input = document.getElementById("input_field");
-	input = "";
-	//input = parseInt(input_field.value);
-	input = eval(input_field.value);
-	console.log(input);
+	_input_1 = $('#input_field').get(0);
+	//_input_1 = "";
+	_input_1 = eval(input_field.value);
+	console.log(_input_1);
 }
 
 function TwoInputs () {
-	
+	_input_1 = eval($('#input_field_1').get(0).value);
+	_input_2 = eval($('#input_field_2').get(0).value);
+	console.log(_input_1);
+	console.log(_input_2);
 }
 
 function ThreeInputs () {
@@ -62,23 +69,17 @@ function functionSelect(_op) {
 	switch (_op) {
 		case "1":
 			// Alg. Euclides
-			console.log("Launched alg. de euclides");
+			console.log("Launched Euclidean algorithm");
 			console.log("Function not implemented yet.");
 			break;
 
 		case "2":
 			// Fact. Primos
 			console.log("Launched desc. factores primos");
-
-			var input = document.getElementById("input_field");
-			input = "";
-			//input = parseInt(input_field.value);
-			input = eval(input_field.value);
-			console.log(input);
-
-			_result_temp = launchFactoresPrimos(input);
+			OneInput();
+			_result_temp = launchFactoresPrimos(_input_1);
 			_op_done = func_array[2];
-			_res_op_temp = func_array[2] + " of " + input;
+			_res_op_temp = func_array[2] + " of " + _input_1;
 			console.log(_result_temp);
 			break;
 
@@ -92,49 +93,36 @@ function functionSelect(_op) {
 		case "4":
 			// Factorial
 			console.log("Launched factorial");
-
-			var input = document.getElementById("input_field");
-			input = "";
-			//input = parseInt(input_field.value);
-			input = eval(input_field.value);
-			console.log(input);
-
-			_result_temp = launchFactorial(input);
+			OneInput();
+			_result_temp = launchFactorial(_input_1);
 			_op_done = func_array[4];
-			_res_op_temp = func_array[4] + " of " + input;
+			_res_op_temp = func_array[4] + " of " + _input_1;
 			console.log(_result_temp);
 			break;
 
 		case "5":
 			console.log("Combinations");
-			var _inp_1 = eval(document.getElementById("input_field_1").value);
-			var _inp_2 = eval(document.getElementById("input_field_2").value);
-			console.log(_inp_1);
-			console.log(_inp_2);
-			_result_temp = launchCombinations(_inp_1, _inp_2);
+			TwoInputs();
+			_result_temp = launchCombinations(_input_1, _input_2);
 			_op_done = func_array[5];
-			_res_op_temp = func_array[5] + " of (" + _inp_1 + "," + _inp_2 + ").";
+			_res_op_temp = func_array[5] + " of (" + _input_1 + "," + _input_2 + ").";
 			console.log(_res_op_temp);
 			break;
 
 		case "6":
 			console.log("Arreglos");
-			var _inp_1 = eval(document.getElementById("input_field_1").value);
-			var _inp_2 = eval(document.getElementById("input_field_2").value);
-			console.log(_inp_1);
-			console.log(_inp_2);
-			_result_temp = LaunchArranges(_inp_1, _inp_2);
+			TwoInputs();
+			_result_temp = LaunchArranges(_input_1, _input_2);
 			_op_done = func_array[6];
-			_res_op_temp = _op_done + " of (" + _inp_1 + "," + _inp_2 + ").";
+			_res_op_temp = _op_done + " of (" + _input_1 + "," + _input_2 + ").";
 			console.log(_res_op_temp);
 			break;
-
 
 		/* --- --- */
 
 		case "0":
 			console.log("No function selected");
-			alert("Por favor, selecciona una operación.");
+			alert("Please, select any function.");
 			break;
 	}
 	_op_done = _res_op_temp;
