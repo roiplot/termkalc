@@ -1,6 +1,5 @@
-var func_selector = $('#func_selector').get(0);
+var _func_selector = $('#func_selector').get(0);
 var _area = $('#input_area').get(0);
-
 
 function clear() {
     _area.innerHTML = "";
@@ -12,9 +11,9 @@ function loadFuncSelector() {
         var item = document.createElement("option");
         item.value = op_index;
         item.innerHTML = func_array[op_index];
-        func_selector.appendChild(item);
+        _func_selector.appendChild(item);
     }
-}
+}   
 
 /* --- Input Templates --- */
 
@@ -51,7 +50,7 @@ function LoadThreeInptus() {
 /* --- --- */
 function loadProperFields() {
     clear();
-    let _current = func_selector.value;
+    let _current = _func_selector.value;
     switch (_current) {
         case "1": // MCD
             LoadTwoInputs("First Number", "Second Number");
@@ -99,7 +98,7 @@ function loadProperFields() {
 }
 
 function loadFooter() {
-    let _footer = document.getElementById("footer");
+    let _footer = $('#footer').get(0);
     _footer.setAttribute("center", "text-align");
     _footer.innerHTML = _footer_text;
 }
