@@ -15,7 +15,7 @@ function Fact(_n)
 
 /* --- Functions --- */
 
-function Arranges(_num1, _num2) {
+function Arrangements(_num1, _num2) {
 	var _top = Fact(_num1);
 	var _bottom = Fact(_num1 - _num2);
 	return _top/_bottom;
@@ -80,8 +80,8 @@ function launchCombinations(_num1, _num2) {
 	return Combinations(_num1, _num2);
 }
 
-function LaunchArranges(_num1, _num2) {
-	return Arranges(_num1, _num2);
+function LaunchArrangements(_num1, _num2) {
+	return Arrangements(_num1, _num2);
 }
 
 function launchMcd(_a, _b){

@@ -107,7 +107,7 @@ function functionSelect(_op) {
 		case "6":
 			console.log("Arreglos");
 			TwoInputs();
-			_result_temp = LaunchArranges(_input_1, _input_2);
+			_result_temp = LaunchArrangements(_input_1, _input_2);
 			_op_done = func_array[6];
 			_res_op_temp = _op_done + " of (" + _input_1 + "," + _input_2 + ").";
 			console.log(_res_op_temp);
