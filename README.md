@@ -1,1 +1,1 @@
-[Termakalc](https://optimistic-villani-9c0a33.netlify.app/)
+[Termakalc](https://termkalc.netlify.app/)
