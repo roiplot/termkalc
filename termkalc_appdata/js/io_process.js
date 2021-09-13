@@ -54,7 +54,12 @@ function TwoInputs () {
 }
 
 function ThreeInputs () {
-	
+	_input_1 = eval($('#input_field_1').get(0).value);
+	_input_2 = eval($('#input_field_2').get(0).value);
+	_input_3 = eval($('#input_field_3').get(0).value);
+	console.log(_input_1);
+	console.log(_input_2);
+	console.log(_input_3);
 }
 
 
@@ -72,7 +77,7 @@ function functionSelect(_op) {
 			// Fact. Primos
 			console.log("Launched desc. factores primos");
 			OneInput();
-			_result_temp = launchFactoresPrimos(_input_1);
+			_result_temp = launchPrimeFactors(_input_1);
 			_op_done = func_array[2];
 			_res_op_temp = func_array[2] + " of " + _input_1;
 			console.log(_result_temp);

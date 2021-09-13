@@ -3,7 +3,7 @@ let _ret = "";
 
 /* --- Simple functions --- */
 
-function Fact(_n)
+function fact(_n)
 {
     var init=1;
     for (var i = 2; i <= _n; i++)
@@ -15,15 +15,15 @@ function Fact(_n)
 
 /* --- Functions --- */
 
-function Arrangements(_num1, _num2) {
-	var _top = Fact(_num1);
-	var _bottom = Fact(_num1 - _num2);
+function arrangements(_num1, _num2) {
+	var _top = fact(_num1);
+	var _bottom = fact(_num1 - _num2);
 	return _top/_bottom;
 }
 
-function Combinations(_num1, _num2) {
-	var _top = Fact(_num1);
-	var _bottom = Fact(_num1 - _num2) * Fact(_num2);
+function combinations(_num1, _num2) {
+	var _top = fact(_num1);
+	var _bottom = fact(_num1 - _num2) * fact(_num2);
 	return _top/_bottom;
 }
 
@@ -68,20 +68,20 @@ function mcd(_a, _b){
 /* --- Launchers --- */
 
 function launchFactorial(_nmb) {
-	return Fact(_nmb);
+	return fact(_nmb);
 }
 
-function launchFactoresPrimos(_nmb) {
+function launchPrimeFactors(_nmb) {
     return printPrimeFactors(_nmb);
 
 }
 
 function launchCombinations(_num1, _num2) {
-	return Combinations(_num1, _num2);
+	return combinations(_num1, _num2);
 }
 
 function LaunchArrangements(_num1, _num2) {
-	return Arrangements(_num1, _num2);
+	return arrangements(_num1, _num2);
 }
 
 function launchMcd(_a, _b){
