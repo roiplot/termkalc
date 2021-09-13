@@ -7,10 +7,6 @@ var resultado_field = $('#result').get(0);
 var req_op_field = $('#op_req').get(0);
 var op_selected_field = $('#func_selector').get(0);
 
-// let resultado_field = document.getElementById("result");
-// let req_op_field = document.getElementById("op_req");
-// let op_selected_field = document.getElementById('func_selector');
-
 // LOCAL
 var _res = ""; // final result
 var _op_done = "";
