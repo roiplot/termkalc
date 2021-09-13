@@ -11,4 +11,4 @@ let func_array = [_default, func_1, func_2, func_3, func_4, func_5, func_6];
 // --- --- //
 
 let site_title = "Termkalc (Ultra-alpha)";
-let _footer_text = "Termkalc 2021";
+let _footer_text = "Termkalc 2021 - Uruguay";
