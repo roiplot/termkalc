@@ -62,7 +62,20 @@ function primeFactors(_n) {
 }
 
 function mcd(_a, _b){
-
+	// Done with Euclidean Algorithm
+	let a, b, aux, g, r;
+	if (a < b) {
+		aux = b;
+		b = a;
+		a = aux;
+	}
+	while (b != 0) {
+		r = a % b;
+		a = b;
+		b = r;
+	}
+	g = a;
+	return g;
 }
 
 /* --- Launchers --- */
@@ -73,7 +86,6 @@ function launchFactorial(_nmb) {
 
 function launchPrimeFactors(_nmb) {
     return primeFactors(_nmb);
-
 }
 
 function launchCombinations(_num1, _num2) {
@@ -85,5 +97,5 @@ function LaunchArrangements(_num1, _num2) {
 }
 
 function launchMcd(_a, _b){
-
+	return mcd(_a, _b);
 }

@@ -70,7 +70,12 @@ function functionSelect(_op) {
 		case "1":
 			// Alg. Euclides
 			console.log("Launched Euclidean algorithm");
-			console.log("Function not implemented yet.");
+			TwoInputs();
+			_result_temp = launchMcd(_input_1, _input_2);
+			_op_done = func_array[1];
+			_res_op_temp = func_array[1] + " of (" + _input_1 + "," + _input_2 + ").";
+			console.log(_res_op_temp);
+			//console.log("Function not implemented yet.");
 			break;
 
 		case "2":
