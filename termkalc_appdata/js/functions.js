@@ -63,6 +63,7 @@ function primeFactors(_n) {
 
 function mcd(_a, _b){
 	// Done with Euclidean Algorithm
+	// No anda aun
 	let a, b, aux, g, r;
 	if (a < b) {
 		aux = b;
