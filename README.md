@@ -1,1 +1,1 @@
-[Termakalc](https://termkalc.netlify.app/)
+[Termkalc](https://termkalc.netlify.app/)
